@@ -1,9 +1,9 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="pedidos-run" type="Application" factoryName="Application" singleton="false">
+  <configuration default="false" name="gateway-run" type="Application" factoryName="Application">
     <option name="ALTERNATIVE_JRE_PATH" value="17" />
     <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-    <option name="MAIN_CLASS_NAME" value="br.com.alurafood.pedidos.PedidosApplication" />
-    <module name="pedidos" />
+    <option name="MAIN_CLASS_NAME" value="br.com.alurafood.gateway.GatewayApplication" />
+    <module name="gateway" />
     <method v="2">
       <option name="Make" enabled="true" />
     </method>

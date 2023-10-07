@@ -21,6 +21,7 @@
         <module>pagamentos</module>
         <module>pedidos</module>
         <module>server</module>
+        <module>gateway</module>
     </modules>
 
     <properties>
