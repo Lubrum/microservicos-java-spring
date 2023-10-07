@@ -20,22 +20,18 @@ import java.util.stream.Collectors;
 public class PedidoService {
 
     @Autowired
-    private PedidoRepository repository;
-
-    @Autowired
     private final ModelMapper modelMapper;
-
+    @Autowired
+    private PedidoRepository repository;
 
     public List<PedidoDto> obterTodos() {
         return repository.findAll().stream()
-                .map(p -> modelMapper.map(p, PedidoDto.class))
-                .collect(Collectors.toList());
+            .map(p -> modelMapper.map(p, PedidoDto.class))
+            .collect(Collectors.toList());
     }
 
     public PedidoDto obterPorId(Long id) {
-        Pedido pedido = repository.findById(id)
-                .orElseThrow(EntityNotFoundException::new);
-
+        Pedido pedido = repository.findById(id).orElseThrow(EntityNotFoundException::new);
         return modelMapper.map(pedido, PedidoDto.class);
     }
 
@@ -51,7 +47,6 @@ public class PedidoService {
     }
 
     public PedidoDto atualizaStatus(Long id, StatusDto dto) {
-
         Pedido pedido = repository.porIdComItens(id);
 
         if (pedido == null) {
@@ -64,7 +59,6 @@ public class PedidoService {
     }
 
     public void aprovaPagamentoPedido(Long id) {
-
         Pedido pedido = repository.porIdComItens(id);
 
         if (pedido == null) {

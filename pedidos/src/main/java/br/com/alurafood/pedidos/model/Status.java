@@ -8,5 +8,5 @@ public enum Status {
     CONFIRMADO,
     PRONTO,
     SAIU_PARA_ENTREGA,
-    ENTREGUE;
+    ENTREGUE
 }

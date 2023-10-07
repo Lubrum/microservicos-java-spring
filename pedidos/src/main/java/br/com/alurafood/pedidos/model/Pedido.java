@@ -19,15 +19,17 @@ import java.util.List;
 @AllArgsConstructor
 public class Pedido {
 
-    @Id @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @NotNull
     private LocalDateTime dataHora;
 
-    @NotNull @Enumerated(EnumType.STRING)
+    @NotNull
+    @Enumerated(EnumType.STRING)
     private Status status;
 
-    @OneToMany(cascade=CascadeType.PERSIST, mappedBy="pedido")
+    @OneToMany(cascade = CascadeType.PERSIST, mappedBy = "pedido")
     private List<ItemDoPedido> itens = new ArrayList<>();
 }

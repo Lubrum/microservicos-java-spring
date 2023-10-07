@@ -15,6 +15,4 @@ public interface PedidoRepository extends JpaRepository<Pedido, Long> {
 
     @Query(value = "SELECT p from Pedido p LEFT JOIN FETCH p.itens where p.id = :id")
     Pedido porIdComItens(Long id);
-
-
 }
