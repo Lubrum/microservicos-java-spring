@@ -14,7 +14,7 @@ public class PagamentoListener {
                 Dados do pagamento: %s
                 Número do pedido: %s
                 Valor R$: %s
-                Status: %s 
+                Status: %s
                 """.formatted(pagamento.getId(),
             pagamento.getPedidoId(),
             pagamento.getValor(),

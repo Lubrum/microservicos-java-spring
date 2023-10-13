@@ -18,6 +18,7 @@
     <description>MS do AluraFood</description>
 
     <modules>
+        <module>avaliacao</module>
         <module>pagamentos</module>
         <module>pedidos</module>
         <module>server</module>
