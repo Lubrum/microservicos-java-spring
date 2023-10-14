@@ -3,13 +3,13 @@
 # Para executar o projeto
 
 1. Rode um banco de dados mysql em um container Docker:
-2. 
+
 ```sh
 docker run -d -p 3306:3306 --name mysql-container -e MYSQL_ROOT_PASSWORD=root mysql:8.1.0
 ```
 
 2. Suba o RabbitMQ em um container Docker:
-3. 
+
 ```sh
 cd rabbit && docker compose up -d
 ```
