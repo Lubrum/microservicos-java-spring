@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   rabbitmq:
-    image: rabbitmq:3.10-management
+    image: rabbitmq:3.12.6-management
     container_name: rabbitmq
     restart: always
     ports:
@@ -10,6 +10,9 @@ services:
       - "15672:15672"
     volumes:
       - ./dados:/var/lib/rabbitmq/
-    environment:
-      - RABBITMQ_DEFAULT_USER=admin
-      - RABBITMQ_DEFAULT_PASS=admin
+    env_file:
+      - .env
+
+networks:
+  my-network:
+    driver: bridge
