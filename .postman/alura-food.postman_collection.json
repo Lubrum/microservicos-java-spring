@@ -1,0 +1,114 @@
+{
+	"info": {
+		"_postman_id": "3d66fe5e-df5c-4099-9017-545102a6caa4",
+		"name": "alura-food",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10352374"
+	},
+	"item": [
+		{
+			"name": "get pagamentos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host-pagamentos}}/pagamentos",
+					"host": [
+						"{{host-pagamentos}}"
+					],
+					"path": [
+						"pagamentos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get pagamento",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host-pagamentos}}/pagamentos/11",
+					"host": [
+						"{{host-pagamentos}}"
+					],
+					"path": [
+						"pagamentos",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get pedidos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host-pedidos}}/pedidos",
+					"host": [
+						"{{host-pedidos}}"
+					],
+					"path": [
+						"pedidos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post pagamentos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"valor\": 2000.00,\n        \"nome\": \"Jacqueline\",\n        \"numero\": \"123456\",\n        \"expiracao\": \"10/2028\",\n        \"codigo\": 875,\n        \"status\": \"CONFIRMADO\",\n        \"formaDePagamentoId\": 1,\n        \"pedidoId\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host-pagamentos}}/pagamentos",
+					"host": [
+						"{{host-pagamentos}}"
+					],
+					"path": [
+						"pagamentos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post pedidos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"itens\": [\n    {\n        \"quantidade\": 11,\n        \"descricao\": \"Coca-cola\"\n    },\n    {\n        \"quantidade\": 5,\n        \"descricao\": \"Mc Chicken\"\n    }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host-pedidos}}/pedidos",
+					"host": [
+						"{{host-pedidos}}"
+					],
+					"path": [
+						"pedidos"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,5 +1,31 @@
 # Projeto de microserviços com Java, Spring, Rabbitmq, Eureka, Gateway, OpenFeign, Docker, MySQL e Flyway.
 
+# Para executar o projeto
+
+1. Rode um banco de dados mysql em um container Docker:
+2. 
+```sh
+docker run -d -p 3306:3306 --name mysql-container -e MYSQL_ROOT_PASSWORD=root mysql:8.1.0
+```
+
+2. Suba o RabbitMQ em um container Docker:
+3. 
+```sh
+cd rabbit && docker compose up -d
+```
+
+3. Inicialize os módulos deste projeto. Basta dar run em cada um deles nesta ordem:
+
+- eureka-server-run;
+- gateway-run;
+- pedidos-run;
+- avaliacao-run;
+- pagamentos-run;
+
+4. Teste as APIs conforme modelos disponibilizados no diretório .postman para uso e testes no Postman.
+
+5. Avalie também as filas do RabbitMQ no Admin em localhost:15672 e nos logs das aplicações pedidos e avaliações que possuem listener em eventos de pagamentos.
+
 ## Passos para criação de um cluster com três nós do RabbitMQ:
 
 1. Criar containers do rabbitmq:
