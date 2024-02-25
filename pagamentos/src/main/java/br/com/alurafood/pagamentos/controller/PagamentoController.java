@@ -34,7 +34,6 @@ public class PagamentoController {
     @GetMapping("/{id}")
     public ResponseEntity<PagamentoDto> detalhar(@PathVariable @NotNull Long id) {
         PagamentoDto dto = service.obterPorId(id);
-
         return ResponseEntity.ok(dto);
     }
 
@@ -43,7 +42,6 @@ public class PagamentoController {
     public ResponseEntity<PagamentoDto> cadastrar(@RequestBody @Valid PagamentoDto dto, UriComponentsBuilder uriBuilder) {
         PagamentoDto pagamento = service.criarPagamento(dto);
         URI endereco = uriBuilder.path("/pagamentos/{id}").buildAndExpand(pagamento.getId()).toUri();
-
 //        Message message = new Message(("Criei um pagamento com o id " + pagamento.getId()).getBytes());
 //        rabbitTemplate.send("pagamento.concluido", message);
         rabbitTemplate.convertAndSend("pagamentos.ex","", pagamento);

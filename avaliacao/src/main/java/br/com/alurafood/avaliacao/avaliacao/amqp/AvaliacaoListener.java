@@ -18,11 +18,11 @@ public class AvaliacaoListener {
         }
 
         String mensagem = """
-            Necessário criar registro de avaliação para o pedido: %s 
+            Necessário criar registro de avaliação para o pedido: %s\s
             Id do pagamento: %s
             Nome do cliente: %s
             Valor R$: %s
-            Status: %s 
+            Status: %s\s
             """.formatted(pagamento.getPedidoId(),
             pagamento.getId(),
             pagamento.getNome(),

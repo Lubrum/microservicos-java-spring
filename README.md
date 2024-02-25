@@ -5,7 +5,7 @@
 1. Rode um banco de dados mysql em um container Docker:
 
 ```sh
-docker run -d -p 3306:3306 --name mysql-container -e MYSQL_ROOT_PASSWORD=root mysql:8.1.0
+docker run -d -p 3320:3320 --name mysql-container -e MYSQL_ROOT_PASSWORD=root mysql:8.1.0
 ```
 
 2. Suba o RabbitMQ em um container Docker:
